@@ -3,24 +3,26 @@ import java.util.List;
 
 public class Task {
     private String title;
-    private List<TaskAnswer> answers = new ArrayList<TaskAnswer>();
-    private int correctAnswerId;
+    private List<String> answers = new ArrayList<String>();
+    private String correctAnswer;
 
-    public Task(String title, List<TaskAnswer> answers, int correctAnswerId) {
+    public String getCorrectAnswer() {
+        return correctAnswer;
+    }
+
+
+    public Task(String title, List<String> answers, String correctAnswer) {
         this.title = title;
         this.answers = answers;
-        this.correctAnswerId = correctAnswerId;
+        this.correctAnswer = correctAnswer;
     }
+
 
     public String getTitle() {
         return title;
     }
 
-    public List<TaskAnswer> getAnswers() {
+    public List<String> getAnswers() {
         return answers;
-    }
-
-    public int getCorrectAnswerId() {
-        return correctAnswerId;
     }
 }
